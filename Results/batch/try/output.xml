@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170407 16:32:42.746" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Automation\robot_scripts\Yuanbao\Tests\PlayerCenter" id="s1" name="PlayerCenter">
+<suite source="C:\Automation\robot_scripts\Yuanbao\Tests\PlayerCenter\Deposit.robot" id="s1-s1" name="Deposit">
+<test id="s1-s1-t1" name="Deposit using Third-party payment">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:42.855" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170407 16:32:46.354" starttime="20170407 16:32:42.855"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170407 16:32:47.557" starttime="20170407 16:32:46.354"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:32:47.557" starttime="20170407 16:32:42.855"></status>
+</kw>
+<kw name="Load" library="Home">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${YUANBAO_PC}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:47.563" level="INFO">Opening url 'http://player.yuanbao.og.office'</msg>
+<status status="PASS" endtime="20170407 16:32:48.272" starttime="20170407 16:32:47.562"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 16:32:50.279" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 16:32:50.279" starttime="20170407 16:32:48.272"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:32:50.279" starttime="20170407 16:32:47.560"></status>
+</kw>
+<kw name="Valid Credentials" library="Login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_TB}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:50.279" level="INFO">Typing text 'testley1' into text field 'name=username'</msg>
+<status status="PASS" endtime="20170407 16:32:50.419" starttime="20170407 16:32:50.279"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_TB}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:50.420" level="INFO">Typing text 'asdf123' into text field 'name=password'</msg>
+<status status="PASS" endtime="20170407 16:32:50.508" starttime="20170407 16:32:50.420"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_BTN}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:50.508" level="INFO">Clicking button 'css=body &gt; div.panel.panel-primary &gt; div.panel-body &gt; div &gt; div &gt; div.panel.panel-primary &gt; div.panel-body &gt; form &gt; center &gt; div &gt; input'.</msg>
+<status status="PASS" endtime="20170407 16:32:51.664" starttime="20170407 16:32:50.508"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:32:51.664" starttime="20170407 16:32:50.279"></status>
+</kw>
+<kw name="Select Deposit Menu" library="Home">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DEPOSIT_MENU}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:51.668" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul:nth-child(1) &gt; li:nth-child(2) &gt; a'.</msg>
+<status status="PASS" endtime="20170407 16:32:52.488" starttime="20170407 16:32:51.667"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:32:52.488" starttime="20170407 16:32:51.667"></status>
+</kw>
+<kw name="Third-party payment" library="Deposit">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${THIRDPARTY_BTN}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:52.492" level="INFO">Clicking element 'css=body &gt; div.panel.panel-primary &gt; div.panel-body &gt; div.row.deposit-wrapper &gt; div.deposit-list &gt; div &gt; div &gt; a:nth-child(1)'.</msg>
+<status status="PASS" endtime="20170407 16:32:53.326" starttime="20170407 16:32:52.491"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${THIRDPARTY_URL}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:53.339" level="INFO">Current location is 'http://player.yuanbao.og.office/iframe_module/auto_payment/2'.</msg>
+<status status="PASS" endtime="20170407 16:32:53.339" starttime="20170407 16:32:53.326"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${DEPOSIT_AMOUNT_TB}</arg>
+<arg>${DEPOSIT_AMOUNT}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:53.340" level="INFO">Typing text '100' into text field 'deposit_amount'</msg>
+<status status="PASS" endtime="20170407 16:32:53.422" starttime="20170407 16:32:53.340"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 16:32:55.436" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 16:32:55.436" starttime="20170407 16:32:53.422"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${DEPOSIT_SUBMIT_BTN}</arg>
+</arguments>
+<msg timestamp="20170407 16:32:55.436" level="INFO">Clicking element 'id=btn-submit'.</msg>
+<status status="PASS" endtime="20170407 16:32:55.570" starttime="20170407 16:32:55.436"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 16:32:57.571" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 16:32:57.571" starttime="20170407 16:32:55.570"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:32:57.572" starttime="20170407 16:32:52.491"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170407 16:33:00.774" starttime="20170407 16:32:57.575"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:33:00.774" starttime="20170407 16:32:57.573"></status>
+</kw>
+<tags>
+<tag>deposit</tag>
+<tag>positive</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" endtime="20170407 16:33:00.774" critical="yes" starttime="20170407 16:32:42.852"></status>
+</test>
+<status status="PASS" endtime="20170407 16:33:00.774" starttime="20170407 16:32:42.767"></status>
+</suite>
+<suite source="C:\Automation\robot_scripts\Yuanbao\Tests\PlayerCenter\Withdraw.robot" id="s1-s2" name="Withdraw">
+<test id="s1-s2-t1" name="Withdraw using &quot;My Bank Account&quot;">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:00.806" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170407 16:33:04.246" starttime="20170407 16:33:00.806"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170407 16:33:05.423" starttime="20170407 16:33:04.247"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:33:05.424" starttime="20170407 16:33:00.806"></status>
+</kw>
+<kw name="Load" library="Home">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${YUANBAO_PC}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:05.425" level="INFO">Opening url 'http://player.yuanbao.og.office'</msg>
+<status status="PASS" endtime="20170407 16:33:06.215" starttime="20170407 16:33:05.425"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 16:33:08.231" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 16:33:08.231" starttime="20170407 16:33:06.216"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:33:08.231" starttime="20170407 16:33:05.424"></status>
+</kw>
+<kw name="Valid Credentials" library="Login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${USERNAME_TB}</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:08.231" level="INFO">Typing text 'testley1' into text field 'name=username'</msg>
+<status status="PASS" endtime="20170407 16:33:08.348" starttime="20170407 16:33:08.231"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${PASSWORD_TB}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:08.349" level="INFO">Typing text 'asdf123' into text field 'name=password'</msg>
+<status status="PASS" endtime="20170407 16:33:08.438" starttime="20170407 16:33:08.349"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN_BTN}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:08.438" level="INFO">Clicking button 'css=body &gt; div.panel.panel-primary &gt; div.panel-body &gt; div &gt; div &gt; div.panel.panel-primary &gt; div.panel-body &gt; form &gt; center &gt; div &gt; input'.</msg>
+<status status="PASS" endtime="20170407 16:33:09.694" starttime="20170407 16:33:08.438"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:33:09.694" starttime="20170407 16:33:08.231"></status>
+</kw>
+<kw name="Select Withdraw Menu" library="Home">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${WITHDRAW_MENU}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:09.698" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul:nth-child(1) &gt; li:nth-child(3) &gt; a'.</msg>
+<status status="PASS" endtime="20170407 16:33:09.769" starttime="20170407 16:33:09.698"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:33:09.769" starttime="20170407 16:33:09.697"></status>
+</kw>
+<kw name="Using &quot;My Bank Account&quot;" library="Withdraw">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WITHDRAW_URL}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:10.486" level="INFO">Current location is 'http://player.yuanbao.og.office/player_center/withdraw'.</msg>
+<status status="PASS" endtime="20170407 16:33:10.486" starttime="20170407 16:33:09.770"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${WITHDRAW_AMOUNT_TB}</arg>
+<arg>${WITHDRAW_AMOUNT}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:10.487" level="INFO">Typing text '10' into text field 'name=amount'</msg>
+<status status="PASS" endtime="20170407 16:33:10.569" starttime="20170407 16:33:10.487"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 16:33:12.576" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 16:33:12.576" starttime="20170407 16:33:10.569"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${MYBANKACCOUNT_BTN}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:12.576" level="INFO">Clicking element 'id=tab-preferred-account'.</msg>
+<status status="PASS" endtime="20170407 16:33:12.696" starttime="20170407 16:33:12.576"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20170407 16:33:13.698" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170407 16:33:13.698" starttime="20170407 16:33:12.696"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${EXISTINGBANK_DROPDOWN}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:13.698" level="INFO">Clicking element 'css=#preferred_account &gt; option:nth-child(2)'.</msg>
+<status status="PASS" endtime="20170407 16:33:13.799" starttime="20170407 16:33:13.698"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${WITHDRAW_SUBMIT_BTN}</arg>
+</arguments>
+<msg timestamp="20170407 16:33:13.800" level="INFO">Clicking button 'css=#new_acct_form &gt; div.col-md-10.col-md-offset-1 &gt; div.form-group.form-inline &gt; div &gt; input.btn.btn-primary'.</msg>
+<status status="PASS" endtime="20170407 16:33:13.878" starttime="20170407 16:33:13.799"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 16:33:15.878" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 16:33:15.878" starttime="20170407 16:33:13.878"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:33:15.879" starttime="20170407 16:33:09.770"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170407 16:33:19.085" starttime="20170407 16:33:15.881"></status>
+</kw>
+<status status="PASS" endtime="20170407 16:33:19.085" starttime="20170407 16:33:15.880"></status>
+</kw>
+<tags>
+<tag>positive</tag>
+<tag>smoke</tag>
+<tag>withdraw</tag>
+</tags>
+<status status="PASS" endtime="20170407 16:33:19.085" critical="yes" starttime="20170407 16:33:00.806"></status>
+</test>
+<status status="PASS" endtime="20170407 16:33:19.085" starttime="20170407 16:33:00.790"></status>
+</suite>
+<status status="PASS" endtime="20170407 16:33:19.100" starttime="20170407 16:32:42.748"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">deposit</stat>
+<stat fail="0" pass="2">positive</stat>
+<stat fail="0" pass="2">smoke</stat>
+<stat fail="0" pass="1">withdraw</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="PlayerCenter" pass="2">PlayerCenter</stat>
+<stat fail="0" id="s1-s1" name="Deposit" pass="1">PlayerCenter.Deposit</stat>
+<stat fail="0" id="s1-s2" name="Withdraw" pass="1">PlayerCenter.Withdraw</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

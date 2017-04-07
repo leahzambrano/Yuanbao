@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170407 15:08:06.948" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Automation\robot_scripts\Yuanbao\tests\playercenter\withdraw.robot" id="s1" name="Withdraw">
+<test id="s1-t1" name="Withdraw using &quot;My Bank Account&quot;">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170407 15:08:07.027" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20170407 15:08:10.463" starttime="20170407 15:08:07.027"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170407 15:08:11.618" starttime="20170407 15:08:10.464"></status>
+</kw>
+<status status="PASS" endtime="20170407 15:08:11.618" starttime="20170407 15:08:07.027"></status>
+</kw>
+<kw name="Load" library="Home">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${YUANBAO_PC}</arg>
+</arguments>
+<msg timestamp="20170407 15:08:11.620" level="INFO">Opening url 'http://player.yuanbao.og.office'</msg>
+<status status="PASS" endtime="20170407 15:08:12.348" starttime="20170407 15:08:11.619"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 15:08:14.358" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 15:08:14.358" starttime="20170407 15:08:12.348"></status>
+</kw>
+<status status="PASS" endtime="20170407 15:08:14.358" starttime="20170407 15:08:11.619"></status>
+</kw>
+<kw name="Valid Credentials" library="Login">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=username</arg>
+<arg>testley1</arg>
+</arguments>
+<msg timestamp="20170407 15:08:14.358" level="INFO">Typing text 'testley1' into text field 'name=username'</msg>
+<status status="PASS" endtime="20170407 15:08:14.466" starttime="20170407 15:08:14.358"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=password</arg>
+<arg>asdf123</arg>
+</arguments>
+<msg timestamp="20170407 15:08:14.466" level="INFO">Typing text 'asdf123' into text field 'name=password'</msg>
+<status status="PASS" endtime="20170407 15:08:14.555" starttime="20170407 15:08:14.466"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=body &gt; div.panel.panel-primary &gt; div.panel-body &gt; div &gt; div &gt; div.panel.panel-primary &gt; div.panel-body &gt; form &gt; center &gt; div &gt; input</arg>
+</arguments>
+<msg timestamp="20170407 15:08:14.555" level="INFO">Clicking button 'css=body &gt; div.panel.panel-primary &gt; div.panel-body &gt; div &gt; div &gt; div.panel.panel-primary &gt; div.panel-body &gt; form &gt; center &gt; div &gt; input'.</msg>
+<status status="PASS" endtime="20170407 15:08:15.737" starttime="20170407 15:08:14.555"></status>
+</kw>
+<status status="PASS" endtime="20170407 15:08:15.737" starttime="20170407 15:08:14.358"></status>
+</kw>
+<kw name="Select Withdraw Menu" library="Home">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${WITHDRAW_MENU}</arg>
+</arguments>
+<msg timestamp="20170407 15:08:15.741" level="INFO">Clicking element 'css=#bs-example-navbar-collapse-1 &gt; ul:nth-child(1) &gt; li:nth-child(3) &gt; a'.</msg>
+<status status="PASS" endtime="20170407 15:08:16.352" starttime="20170407 15:08:15.741"></status>
+</kw>
+<status status="PASS" endtime="20170407 15:08:16.352" starttime="20170407 15:08:15.740"></status>
+</kw>
+<kw name="Using &quot;My Bank Account&quot;" library="Withdraw">
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${WITHDRAW_URL}</arg>
+</arguments>
+<msg timestamp="20170407 15:08:16.365" level="INFO">Current location is 'http://player.yuanbao.og.office/player_center/withdraw'.</msg>
+<status status="PASS" endtime="20170407 15:08:16.365" starttime="20170407 15:08:16.354"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=amount</arg>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20170407 15:08:16.365" level="INFO">Typing text '10' into text field 'name=amount'</msg>
+<status status="PASS" endtime="20170407 15:08:16.447" starttime="20170407 15:08:16.365"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 15:08:18.450" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 15:08:18.450" starttime="20170407 15:08:16.447"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=tab-preferred-account</arg>
+</arguments>
+<msg timestamp="20170407 15:08:18.450" level="INFO">Clicking element 'id=tab-preferred-account'.</msg>
+<status status="PASS" endtime="20170407 15:08:18.546" starttime="20170407 15:08:18.450"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20170407 15:08:19.560" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20170407 15:08:19.560" starttime="20170407 15:08:18.546"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=#preferred_account &gt; option:nth-child(2)</arg>
+</arguments>
+<msg timestamp="20170407 15:08:19.560" level="INFO">Clicking element 'css=#preferred_account &gt; option:nth-child(2)'.</msg>
+<status status="PASS" endtime="20170407 15:08:19.691" starttime="20170407 15:08:19.560"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>css=#new_acct_form &gt; div.col-md-10.col-md-offset-1 &gt; div.form-group.form-inline &gt; div &gt; input.btn.btn-primary</arg>
+</arguments>
+<msg timestamp="20170407 15:08:19.692" level="INFO">Clicking button 'css=#new_acct_form &gt; div.col-md-10.col-md-offset-1 &gt; div.form-group.form-inline &gt; div &gt; input.btn.btn-primary'.</msg>
+<status status="PASS" endtime="20170407 15:08:19.772" starttime="20170407 15:08:19.691"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20170407 15:08:21.782" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20170407 15:08:21.782" starttime="20170407 15:08:19.772"></status>
+</kw>
+<status status="PASS" endtime="20170407 15:08:21.782" starttime="20170407 15:08:16.353"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170407 15:08:24.971" starttime="20170407 15:08:21.782"></status>
+</kw>
+<status status="PASS" endtime="20170407 15:08:24.971" starttime="20170407 15:08:21.782"></status>
+</kw>
+<tags>
+<tag>positive</tag>
+<tag>smoke</tag>
+<tag>withdraw</tag>
+</tags>
+<status status="PASS" endtime="20170407 15:08:24.971" critical="yes" starttime="20170407 15:08:07.027"></status>
+</test>
+<status status="PASS" endtime="20170407 15:08:24.971" starttime="20170407 15:08:06.948"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">positive</stat>
+<stat fail="0" pass="1">smoke</stat>
+<stat fail="0" pass="1">withdraw</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Withdraw" pass="1">Withdraw</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
